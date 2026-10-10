@@ -1,0 +1,11 @@
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+openpyxl>=3.1.0
+zhconv>=1.4.0
+zhdate>=0.1.0
+httpx>=0.25.0
+sse-starlette>=1.8.0
+lunar-python>=1.2.0
+# 语音转文字端点（/api/asr/transcribe）解析 multipart/form-data 必需：
+# starlette 的表单解析（以及 FastAPI 的 File/Form）都依赖它。纯 Python，无其它依赖。
+python-multipart>=0.0.9

@@ -1,0 +1,120 @@
+/* API 设置与额度提示：暖纸卡面、缥色边界、小面积金色强调。 */
+.llm-page { max-width: 864px; min-width: 0; margin: 0 auto; padding: 0 0 36px; }
+.llm-intro { font-size: 17px; line-height: 1.9; color: var(--ink-2); margin: 0 0 24px; }
+.llm-intro b { color: var(--ink); }
+.llm-sec { margin: 0 0 24px; padding: 24px; border-color: var(--plat-line); box-shadow: inset 0 1px 0 var(--foil-1), var(--shadow-1); }
+.llm-h2 { font-size: 24px; font-weight: 600; line-height: 1.6; color: var(--ink); margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--piao-2); }
+.llm-sub { display: block; font-size: 14px; font-style: normal; color: var(--plat-text); line-height: 1.9; margin-top: 8px; overflow-wrap: anywhere; }
+.llm-sub a { color: var(--gold-deep); text-decoration: underline; text-underline-offset: 4px; }
+.llm-sub a:hover { color: var(--ink); }
+.llm-quota { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.llm-quota-line { font-size: 16px; color: var(--ink-2); }
+.llm-quota-line b { color: var(--gold-deep); font-size: 20px; }
+.llm-field { display: block; min-width: 0; margin: 0 0 24px; }
+.llm-label { display: block; font-size: 16px; color: var(--ink-2); margin-bottom: 8px; }
+.llm-providers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.llm-prov {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  min-height: 72px;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--control-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  overflow-wrap: anywhere;
+  transition: border-color var(--dur-1) var(--ease-ritual), background var(--dur-1) var(--ease-ritual);
+}
+.llm-prov:hover { border-color: var(--ink-2); background: var(--state-hover); }
+.llm-prov.on { border-color: var(--gold-deep); background: var(--state-selected); box-shadow: inset 0 0 0 1px var(--gold-deep); }
+.llm-prov.on:hover { background: var(--state-selected); }
+.llm-rec { font-size: 14px; font-style: normal; color: var(--gold-deep); }
+.llm-prov-note { font-size: 14px; color: var(--plat-text); line-height: 1.8; }
+.llm-page .input { font-size: 16px; min-height: 48px; padding: 12px; border-color: var(--control-border); background: var(--surface); }
+.llm-page .input:focus { border-color: var(--ink-2); outline: 2px solid var(--control-border); outline-offset: 2px; }
+.llm-page .btn, .llm-page .btn-outline { min-height: 48px; font-size: 16px; letter-spacing: 0.04em; padding: 12px 20px; white-space: normal; }
+.llm-page .btn-row { gap: 12px; }
+.llm-notes { background: var(--paper); }
+.llm-notes ul { margin: 0; padding-left: 24px; }
+.llm-notes li { font-size: 16px; line-height: 1.9; color: var(--ink-2); margin-bottom: 12px; overflow-wrap: anywhere; }
+.llm-notes li:last-child { margin-bottom: 0; }
+.llm-notes b { color: var(--ink); }
+
+/* 起卦页额度提示沿用原事件与排列，只增强字号与控件可辨性。 */
+.llm-hint { margin-top: 12px; padding: 12px 16px; font-size: 14px; line-height: 1.9; color: var(--plat-text); border-left: 1px solid var(--piao-3); border-radius: 0 4px 4px 0; background: var(--piao-1); }
+.llm-hint b { color: var(--gold-deep); }
+.llm-hint-btn { margin-left: 8px; min-height: 36px; padding: 4px 12px; font-size: 14px; line-height: 1.8; color: var(--gold-deep); background: var(--surface); border: 1px solid var(--control-border); border-radius: var(--radius); cursor: pointer; transition: background var(--dur-1) var(--ease-ritual); }
+.llm-hint-btn:hover:not(:disabled) { background: var(--state-hover); }
+.llm-hint-btn:disabled { opacity: 1; color: var(--ink-3); background: var(--state-disabled); cursor: default; }
+@media (max-width: 720px) {
+  .llm-providers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .llm-h2 { font-size: 20px; }
+}
+@media (max-width: 480px) {
+  .llm-sec { padding: 20px 16px; }
+  .llm-providers { grid-template-columns: minmax(0, 1fr); }
+  .llm-page .btn-row .btn, .llm-page .btn-row .btn-outline { flex: 1 1 120px; }
+  .llm-quota .btn { width: 100%; }
+  .llm-hint-btn { min-height: 44px; }
+}
+
+/* —— 保存后的打码行（2026-10-08）——
+   key 保存后不再回填输入框，只在这一行显示打码末四位。
+   `user-select: none` 是这条要求的一半——打码行本身也不许被选中复制。 */
+.llm-keymask {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 2px 0 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--text-dim);
+  background: var(--gold-wash);
+  border: 1px solid var(--plat-line);
+  border-radius: var(--radius);
+  user-select: none;
+  -webkit-user-select: none;
+}
+.llm-keymask code {
+  color: var(--ink);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  letter-spacing: .5px;
+}
+.llm-keymask em {
+  font-size: 12.5px;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+/* —— 站长入口（导入本站 key）—— */
+.llm-admin {
+  margin: 2px 0 10px;
+  border: 1px dashed var(--plat-line-strong);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+.llm-admin > summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-light);
+}
+.llm-admin-row {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 6px;
+}
+.llm-admin-row .input { flex: 1; }
+.llm-admin em {
+  font-size: 12.5px;
+  font-style: normal;
+  color: var(--text-dim);
+  line-height: 1.7;
+}

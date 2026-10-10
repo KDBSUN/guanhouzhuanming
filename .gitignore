@@ -1,0 +1,29 @@
+# 密钥与本地数据：任何情况下都不入库
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite3
+
+# 构建与依赖
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 归档与本地资料（不进库：_archive 是本地暂存，books 是有版权的书库）
+_archive/
+books/
+
+# 私有备份与审计/构建中间产物（含书摘与 .env 副本）
+backups/
+backend/data/
+
+# 内部文档与书证底本（文件名/内容已标明不外发；书文本与 books/ 同类，按甲案不进库）
+backend/docs/产品流程总图（内部版·不外发）.md
+backend/docs/类象书证/

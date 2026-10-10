@@ -1,0 +1,91 @@
+/* 首页限定样张。body:has 在首页卸载后自动撤销，不改共享 token。
+   token 层已提升为全局暖白（tokens.css），这里只保留首页专属的
+   表面处理、双线装饰与间距细化。 */
+
+/* 首页导航：3px 双线下边，与工具页单线区分 */
+body:has(.home-view) .topnav { background: var(--surface); border-bottom: 3px double var(--plat-line); }
+
+/* 品牌印：金箔底+暖描边+内高光 */
+body:has(.home-view) .brand-seal {
+  color: var(--ink);
+  background: linear-gradient(rgba(251, 248, 240, 0.45), rgba(251, 248, 240, 0.45)), var(--foil);
+  border-color: var(--plat-line-strong);
+  box-shadow: inset 0 0 0 2px rgba(251, 248, 240, 0.5), var(--shadow-1);
+}
+body:has(.home-view) .brand-slogan { border-color: var(--plat-line); }
+body:has(.home-view) .topnav-tab.active,
+body:has(.home-view) .topnav-drawer a.active { color: var(--state-selected-text); }
+body:has(.home-view) .topnav-drawer { border-color: var(--plat-line); }
+
+/* 首页页脚：丝绢叠底+3px 双线上边 */
+body:has(.home-view) .footer {
+  background: linear-gradient(rgba(239, 232, 217, 0.88), rgba(239, 232, 217, 0.88)), var(--silk);
+  border-top: 3px double var(--plat-line-strong);
+}
+body:has(.home-view) .footer-caution { border-color: var(--plat-line); }
+body:has(.home-view) .footer-head::after { background: var(--plat-line); }
+
+/* 首页间距与卡片专属覆盖 */
+.home-view .hl-strip { margin-bottom: 36px; }
+.home-view .home-hero { gap: 36px; padding: 0; }
+.home-view .hero-title .seal-dot { background: var(--foil); box-shadow: var(--shadow-1); }
+.home-view .hero-stats,
+.home-view .qc-quote,
+.home-view .home-note { border-color: var(--plat-line); }
+.home-view .qc-card,
+.home-view .entry-card,
+.home-view .home-how,
+.home-view .feat-card {
+  background: var(--surface);
+  border: 1px solid var(--plat-line);
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 3px 0 var(--surface), inset 0 4px 0 var(--plat-line), var(--shadow-1);
+}
+.home-view .qc-card { padding: 36px 24px 24px; box-shadow: inset 0 3px 0 var(--surface), inset 0 4px 0 var(--plat-line), var(--shadow-2); }
+.home-view .qc-card::before { top: -1px; height: 2px; background: var(--foil); }
+.home-view .qc-card .textarea { background: var(--surface); }
+.home-view .qc-actions .btn-primary {
+  color: var(--ink);
+  background: linear-gradient(rgba(251, 248, 240, 0.45), rgba(251, 248, 240, 0.45)), var(--foil);
+  border-color: var(--gold-deep);
+  box-shadow: inset 0 1px 0 var(--foil-1), var(--shadow-1);
+}
+.home-view .qc-actions .btn-primary:hover:not(:disabled) {
+  background: linear-gradient(rgba(251, 248, 240, 0.6), rgba(251, 248, 240, 0.6)), var(--foil);
+  box-shadow: var(--shadow-2);
+}
+.home-view .qc-actions .btn-primary:disabled { background: var(--state-disabled); color: var(--state-disabled-text); box-shadow: none; border-color: var(--plat-line-strong); }
+.home-view .entry-grid { margin: 36px 0 72px; gap: 24px; }
+.home-view .entry-card:hover { transform: translateY(-2px); background: var(--state-hover); border-color: var(--plat-line-strong); }
+.home-view .entry-card:active { transform: translateY(0); }
+.home-view .home-how { padding: 36px; margin: 36px 0 72px; }
+.home-view .home-section-head { margin: 0 0 12px; }
+.home-view .home-section-title { margin-bottom: 36px; }
+.home-view .how-step { border-color: var(--plat-line); padding: 0 24px; }
+.home-view .how-step:first-child { padding-left: 0; }
+.home-view .how-step:last-child { padding-right: 0; }
+.home-view .how-step:hover { background: transparent; }
+.home-view .how-num { background: var(--band); color: var(--ink); border-color: var(--plat-line-strong); }
+.home-view .home-features { margin-top: 72px; }
+.home-view .feat-grid { gap: 24px; }
+.home-view .feat-card { padding: 24px 20px; }
+.home-view .feat-card:hover { border-color: var(--plat-line-strong); }
+.home-view .feat-ico { background: var(--band); color: var(--ink-2); }
+.home-view .home-note { margin-top: 36px; padding-top: 36px; border-top-style: double; border-top-width: 3px; }
+@media (max-width: 980px) {
+  .home-view .hero-vertical { border-color: var(--piao-3); }
+}
+@media (max-width: 860px) {
+  .home-view .how-step,
+  .home-view .how-step:first-child,
+  .home-view .how-step:last-child { padding: 24px 0; border-right: 0; border-bottom: 1px solid var(--plat-line); }
+  .home-view .how-step:first-child { padding-top: 0; }
+  .home-view .how-step:last-child { padding-bottom: 0; border-bottom: 0; }
+}
+@media (max-width: 560px) {
+  .home-view .qc-card { padding: 24px 16px; }
+  .home-view .home-how { padding: 24px 16px; }
+  .home-view .home-section-title { margin-bottom: 36px; }
+  .home-view .feat-card { padding: 24px 16px; }
+  .home-view .entry-grid { gap: 16px; }
+}

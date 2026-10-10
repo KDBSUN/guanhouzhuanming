@@ -1,0 +1,117 @@
+/* 白金版视觉令牌：暖白为主、缥为辅，金色仅作小面积选中与强调。
+   表现层调整；数据、状态枚举与五行文字含义不变。 */
+:root {
+  /* 基础色面：宣纸暖白为全局底；缥仅用于辅助 UI 边界/黄历条 */
+  --paper: #F6F2E8;
+  --surface: #FBF8F0;             /* 卡面·新纸（全局默认，非纯白） */
+  --piao-1: #F0F3F4;              /* 缥·月白·辅助边界用 */
+  --piao-2: #D9E0E3;
+  --piao-3: #A8B5BB;
+  --band: #EFE8D9;                /* 旧纸·分区带 */
+  --band-deep: #E6DDC9;           /* 深旧纸·页脚/表头 */
+  /* 丝绢：四站暖灰，纸面明暗层次 */
+  --silk-hi: #EFECE4;
+  --silk-mid: #DCD7CA;
+  --silk-lo: #C6C0B0;
+  --silk: linear-gradient(160deg,
+    var(--silk-hi) 0%, var(--silk-mid) 38%, #E9E5DB 62%, var(--silk-lo) 100%);
+  --plat-line: rgba(107, 102, 88, 0.20);
+  --plat-line-strong: rgba(107, 102, 88, 0.38);
+  --plat-sheen-lo: #D8D3C6;
+  --plat-text: #6E6A5F;           /* 淡墨·小字对比达标 */
+
+  /* 金：五站金箔渐变；深金用于小面积强调文字 */
+  --gold: #C9A75C;
+  --gold-deep: #8F7433;
+  --gold-wash: rgba(201, 167, 92, 0.10);
+  --gold-wash-strong: rgba(201, 167, 92, 0.20);
+  --foil-1: #F2E6C0;
+  --foil-2: #D9BC79;
+  --foil-3: #C9A75C;
+  --foil-4: #8F7433;
+  --foil: linear-gradient(135deg,
+    var(--foil-1) 0%, var(--foil-3) 26%, var(--foil-4) 52%,
+    var(--foil-2) 76%, var(--foil-1) 100%);
+  --on-foil: #FBF7EA;
+
+  /* 文字与控件状态 */
+  --ink: #211F1B;                 /* 暖近黑 */
+  --ink-2: #55524A;
+  --ink-3: #6E6A5F;
+  --text: var(--ink-2);
+  --text-light: var(--ink-2);
+  --text-dim: var(--ink-3);
+  --control-border: #8A8476;
+  --state-hover: #F0EBDD;
+  --state-selected: #F5EEDC;
+  --state-selected-text: #7B632E;
+  --state-disabled: #E5E9EB;
+  --state-disabled-text: #6E6A5F;
+  --focus-ring: #7B632E;
+  --error-text: #874736;
+  --error-bg: #FBF4F1;
+  --error-border: #B07C6D;
+  --success-text: #4C6056;
+  --success-bg: #F0F3F2;
+  --success-border: #9AA9A2;
+
+  /* 数据标识降饱和，文字标签仍完整区分五行 */
+  --wx-jin: #665F52;
+  --wx-mu: #536252;
+  --wx-shui: #506571;
+  --wx-huo: #745E57;
+  --wx-tu: #71624F;
+  --xi: var(--success-text);
+  --ji: var(--error-text);
+
+  /* 沿用本机字体栈，无下载字体 */
+  --font-display: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", "STSong", "STZhongsong", "SimSun", serif;
+  --font-body: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", "STSong", "SimSun", serif;
+  --font-kai: "Kaiti SC", "STKaiti", "KaiTi", "DFKai-SB", "Noto Serif SC", serif;
+  --type-h1: clamp(28px, 3.6vw, 36px);
+  --type-h2: clamp(22px, 2.8vw, 28px);  /* 较前版放大，确保工具页 h2 与正文拉开层级 */
+  --type-h3: 18px;
+  --type-body: 17px;
+  --type-note: 14px;
+  --type-data: 16px;
+  --leading-body: 1.9;
+  --leading-note: 1.75;
+
+  /* 4px 基准；36/72/108 为四九组合尺寸 */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 36px;
+  --sp-6: 72px;
+  --sp-7: 108px;
+  --radius-sm: 2px;               /* 内层小圆角（签/徽章，坐落在较大容器内） */
+  --radius: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 999px;           /* 药丸形；前版误写 4px */
+  /* 暖纸色调阴影，与底色同温；原版用冷灰 */
+  --shadow-1: 0 1px 2px rgba(60, 54, 40, 0.06);
+  --shadow-2: 0 4px 14px rgba(60, 54, 40, 0.08);
+  --shadow-3: 0 12px 36px rgba(60, 54, 40, 0.12);
+
+  --ease-ritual: ease-out;
+  --ease-turn: ease-in-out;
+  --dur-1: 180ms;
+  --dur-2: 240ms;
+  --dur-3: 280ms;
+  --w-page: 1152px;
+  --w-read: 936px;
+  --bar-h: 56px;                  /* 原 72px 过高；工具型 app 导航应轻量 */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; }
+  *, *::before, *::after {
+    /* animation-duration: 0.01ms cuts all animations including opacity-only state feedback.
+       The correct approach per WCAG 2.3 / APCA is to cut spatial movement while preserving
+       opacity transitions that communicate state or completion. We do that per-property below
+       and in the individual motion files. The global kill is removed. */
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

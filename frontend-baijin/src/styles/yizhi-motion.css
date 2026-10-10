@@ -1,0 +1,95 @@
+/* ============================================================
+   yizhi-motion.css — 移植行星页面滚动动效
+   内容永远静态；动效是可选的增强层。
+   ============================================================ */
+
+/* ---- 基础重置：关掉 yizhi.css 里已有的循环动画 ------------- */
+.yz .yz-orbit-satellite,
+.yz .yz-ambient span {
+  animation: none;
+}
+
+/* 进度条默认隐藏 */
+.yz .yz-reading-progress { display: none; }
+
+/* ============================================================
+   仅在用户未要求减少运动时激活所有动效
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* ---- 关键帧 ------------------------------------------- */
+  @keyframes yz-enter {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+
+  @keyframes yz-progress-bar {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+  /* ---- 右侧装饰浮动（自动循环，无滚动绑定） ------------- */
+  .yz .yz-ambient span {
+    animation: yz-edge-drift 18s ease-in-out infinite alternate;
+  }
+  .yz .yz-ambient span:nth-child(2) { animation-delay: -6s;  }
+  .yz .yz-ambient span:nth-child(3) { animation-delay: -12s; }
+
+  /* ---- 阅读进度条 --------------------------------------- */
+  @supports (animation-timeline: scroll()) {
+    .yz .yz-reading-progress {
+      display: block;
+      position: fixed;
+      top: var(--bar-h, 72px);
+      left: 0;
+      right: 0;
+      height: 2px;
+      z-index: 90;
+      pointer-events: none;
+      background: var(--gold, #C9A75C);
+      transform-origin: left center;
+      transform: scaleX(0);
+      animation: yz-progress-bar linear both;
+      animation-timeline: scroll(root block);
+    }
+  }
+
+  /* ============================================================
+     入场动效：仅限一处有叙事意义的焦点——「振荡阶梯」四步。
+     其余小节（部标题、小节号、引文、表格、收口框）在 Read 模式下
+     应静态常显，散布入场不是 motion thesis，按 animate.md 移除。
+     ============================================================ */
+  @supports (animation-timeline: view()) {
+    .yz .yz-flow-step {
+      animation: yz-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 75%;
+    }
+  }
+
+  /* ============================================================
+     回退：不支持 animation-timeline 时用 IntersectionObserver
+     .yz-fallback 由 useEffect 在满足条件时添加到根节点
+     ============================================================ */
+  @supports not (animation-timeline: view()) {
+    .yz.yz-fallback .yz-reveal {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    .yz.yz-fallback .yz-reveal.yz-visible {
+      animation: yz-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+  }
+
+} /* end prefers-reduced-motion: no-preference */
+
+/* ============================================================
+   免责声明与正文散文永远不动
+   ============================================================ */
+.yz .footer-caution,
+.yz .footer-caution *,
+.yz .yz-p,
+.yz .yz-p * {
+  animation: none !important;
+  transition: none !important;
+}

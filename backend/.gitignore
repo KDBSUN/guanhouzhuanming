@@ -1,0 +1,12 @@
+# 密钥与用户数据：绝不入库
+.env
+.env.*
+!.env.example
+backups/
+_drill_restore/
+*.db
+*.db-journal
+*.db-wal
+__pycache__/
+*.pyc
+.pytest_cache/

@@ -1,0 +1,244 @@
+/* ============================================================
+   基础层（融合版）：丝绢书案底 · 刻本排版原语 · 通用工具类
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  font-family: var(--font-body);             /* 用户反馈：整体偏小，正文放大一档 */
+  color: var(--ink-2);
+  /* 书案：铂金丝绢铺底（贴近线装本） */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at 100% 0, var(--silk-hi), transparent 45%), var(--paper);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+/* 纸纹细噪点（不用 mix-blend-mode / fixed attachment —— 截图合成不稳） */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.25;
+}
+
+::selection {
+  background: rgba(201, 167, 92, 0.35);
+  color: var(--ink);
+}
+
+:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--silk-mid); }
+::-webkit-scrollbar-thumb {
+  background: var(--silk-lo);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--silk-mid);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--plat-text); }
+
+/* ---------- 排版 ---------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+p { text-wrap: pretty; }
+
+a {
+  color: var(--gold-deep);
+  text-decoration: none;
+  transition: color var(--dur-1) var(--ease-ritual);
+}
+a:hover { color: var(--ink); }
+
+/* 楷批工具类 */
+.kai { font-family: var(--font-kai); }
+
+/* ---------- 版心与页面容器 ---------- */
+
+.page {
+  width: 100%;
+  max-width: var(--w-read);
+  margin: 0 auto;
+  flex: 1;
+  min-width: 0;
+  animation: leafIn var(--dur-3) var(--ease-turn) both;
+  padding: 36px 24px 72px;
+}
+
+.page-wide { max-width: var(--w-page); }
+
+/* 翻叶入场 */
+@keyframes leafIn {from { opacity: 0; } to { opacity: 1; }
+}
+
+/* ---------- 通用工具类 ---------- */
+
+/* 只给读屏看的文字（视觉上不占位、不可点，但仍会被朗读） */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 小节标签：楷体宽字距 */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-kai);
+  font-size: var(--type-note);
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  color: var(--gold-deep);
+  font-weight: 700;
+}
+
+.kicker-ruled {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-kai);
+  color: var(--plat-text);
+  font-size: var(--type-note);
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+}
+.kicker-ruled::before,
+.kicker-ruled::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--plat-line-strong));
+}
+.kicker-ruled::after {
+  background: linear-gradient(90deg, var(--plat-line-strong), transparent);
+}
+
+/* 竖排引文 */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--font-kai);
+  letter-spacing: 0.5em;
+}
+
+.hairline {
+  height: 1px;
+  border: 0;
+  background: var(--plat-line);
+}
+
+/* 卡面：新纸 */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--plat-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+}
+
+/* 占位签（书册虚线签） */
+.stub-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-kai);
+  font-size: var(--type-note);
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  border: 1px dashed var(--plat-line-strong);
+  border-radius: 2px;
+  padding: 2px 10px;
+  background: var(--paper);
+}
+.stub-mark::before { content: "◻"; font-size: var(--type-note); color: var(--foil-3); }
+
+/* 示例签 */
+.demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-kai);
+  font-size: var(--type-note);
+  letter-spacing: 0.16em;
+  color: var(--foil-4);
+  background: var(--gold-wash);
+  border: 1px solid rgba(143, 116, 51, 0.4);
+  border-radius: 2px;
+  padding: 2px 10px;
+  font-weight: 700;
+}
+
+/* 待墨骨架 */
+.skeleton {
+  border-radius: 2px;
+  animation: none;
+  background: var(--band);
+}
+
+/* 五行签：灰阶底 + 墨字 + 明度阶色点（不收杂色，靠明度与字面区分） */
+.wx-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 26px;
+  height: 24px;
+  padding: 0 9px;
+  border-radius: 2px;
+  font-family: var(--font-kai);
+  font-size: var(--type-note);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+  background: var(--band-deep);
+  border: 1px solid var(--plat-line);
+}
+.wx-chip::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--plat-line-strong);
+  flex-shrink: 0;
+}
+.wx-金::before { background: var(--wx-jin); }
+.wx-木::before { background: var(--wx-mu); }
+.wx-水::before { background: var(--wx-shui); }
+.wx-火::before { background: var(--wx-huo); }
+.wx-土::before { background: var(--wx-tu); }
+@media (max-width: 600px) { .page { padding: 24px 16px 48px; } }

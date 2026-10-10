@@ -1,0 +1,32 @@
+/* Purpose-grouped navigation; scoped selectors preserve home theme overrides. */
+.topnav.topnav-grouped { display:flex; justify-content:space-between; gap:24px; padding:8px 24px; }
+.topnav-grouped .topnav-brand { order:2; margin-right:0; }
+.topnav-grouped .topnav-tabs { display:flex; order:1; gap:6px; }
+.topnav-grouped .topnav-tab { padding:8px 12px; font-size:15px; }
+.topnav-grouped .topnav-bazi { gap:8px; border:1px solid var(--plat-line-strong); background:var(--state-selected); color:var(--state-selected-text,var(--gold-deep)); font-weight:700; }
+.topnav-grouped .topnav-bazi small { color:var(--ink-3); font-size:11px; font-weight:400; }
+.topnav-grouped .topnav-group { position:relative; }
+.topnav-grouped .topnav-group button.topnav-tab { cursor:pointer; gap:8px; background:none; border:none; }
+.topnav-grouped .nav-caret { font-size:11px; transition:transform var(--dur-1); }
+.topnav-grouped .topnav-group.open .nav-caret { transform:rotate(180deg); }
+.topnav-grouped .topnav-group.open button.topnav-tab { background:var(--state-hover); }
+.topnav-grouped .topnav-group.selected button.topnav-tab { color:var(--state-selected-text,var(--gold-deep)); background:var(--state-selected); font-weight:700; }
+.topnav-grouped .topnav-group-menu { position:absolute; top:calc(100% + 8px); left:0; min-width:180px; padding:6px; background:var(--surface); border:1px solid var(--plat-line-strong); border-radius:var(--radius); box-shadow:var(--shadow-2); z-index:60; }
+.topnav-grouped .topnav-group-menu a { display:flex; align-items:center; min-height:44px; padding:8px 12px; color:var(--ink-2); font-family:var(--font-kai); white-space:nowrap; border-radius:var(--radius); }
+.topnav-grouped .topnav-group-menu a:hover { color:var(--ink); background:var(--state-hover); }
+.topnav-grouped .topnav-group-menu a.active { color:var(--state-selected-text,var(--gold-deep)); background:var(--state-selected); font-weight:700; }
+.topnav-grouped a:focus-visible,.topnav-grouped button:focus-visible { outline:2px solid var(--focus-ring); outline-offset:3px; }
+.topnav-grouped .topnav-burger,.topnav-grouped .topnav-drawer { display:none; }
+@media (min-width:768px) { .topnav.topnav-grouped.open .topnav-drawer { display:none; } }
+@media (max-width:1099px) { .topnav.topnav-grouped { gap:12px; padding:8px 16px; } .topnav-grouped .brand-slogan { display:none; } .topnav-grouped .topnav-tab { padding:8px 10px; } }
+@media (max-width:767px) {
+ .topnav-grouped .topnav-brand { order:1; margin-right:auto; } .topnav-grouped .topnav-tabs { display:none; } .topnav-grouped .topnav-burger { display:inline-flex; order:2; }
+ .topnav-grouped.open .topnav-drawer { display:flex; position:absolute; top:100%; left:0; right:0; flex-direction:column; max-height:calc(100dvh - var(--bar-h) - 16px); overflow-y:auto; overscroll-behavior:contain; background:var(--surface); border-bottom:1px solid var(--plat-line); box-shadow:var(--shadow-2); padding:8px 0; }
+ .topnav-grouped .topnav-drawer-group { padding:4px 0 8px; border-bottom:1px solid var(--plat-line); } .topnav-grouped .topnav-drawer-group:last-child { border-bottom:0; }
+ .topnav-grouped .topnav-drawer-title { display:block; padding:8px 24px 4px; color:var(--ink-3); font-size:12px; letter-spacing:.12em; }
+ .topnav-grouped .topnav-drawer-group.selected .topnav-drawer-title { color:var(--state-selected-text,var(--gold-deep)); font-weight:700; }
+ .topnav-grouped .topnav-drawer a { display:flex; align-items:center; gap:12px; min-height:44px; padding:8px 24px; color:var(--ink-2); font-family:var(--font-kai); border-left:1px solid transparent; }
+ .topnav-grouped .topnav-drawer a:hover { color:var(--ink); background:var(--state-hover); } .topnav-grouped .topnav-drawer a.active { color:var(--state-selected-text,var(--gold-deep)); background:var(--state-selected); border-left-color:var(--gold); font-weight:700; }
+ .topnav-grouped .topnav-drawer .topnav-bazi { border:0; border-left:1px solid var(--plat-line-strong); border-radius:0; }
+}
+@media (prefers-reduced-motion:reduce) { .topnav-grouped .nav-caret { transition:none; } }
