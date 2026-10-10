@@ -27,3 +27,8 @@ backend/data/
 # 内部文档与书证底本（文件名/内容已标明不外发；书文本与 books/ 同类，按甲案不进库）
 backend/docs/产品流程总图（内部版·不外发）.md
 backend/docs/类象书证/
+
+# 本地工作文件夹（不进库：github=发布副本，fuwuqi=服务器文件集，shiyan=本地实验沙盒）
+github/
+fuwuqi/
+shiyan/
