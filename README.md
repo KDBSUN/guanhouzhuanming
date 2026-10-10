@@ -19,7 +19,7 @@
 ## 目录结构
 
 - `backend/` — FastAPI 服务：排盘引擎、命局校验、限流、邮件、外应配卦
-- `frontend-baijin/` — React + Vite + TypeScript（白金版前端）
+- `frontend/` — React + Vite + TypeScript（白金版前端）
 - `data/` — 六十四卦资料（排盘引擎读取）
 - `backend/docs/` — 判据总表、产品流程总图
 
@@ -37,7 +37,7 @@ python -m uvicorn main:app --host 127.0.0.1 --port 8000
 ### 前端
 
 ```bash
-cd frontend-baijin
+cd frontend
 npm install
 npm run dev
 ```

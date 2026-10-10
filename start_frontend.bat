@@ -1,10 +1,10 @@
 @echo off
 setlocal
-title Bagua Frontend Baijin
-cd /d "%~dp0frontend-baijin"
+title Bagua Frontend
+cd /d "%~dp0frontend"
 
 rem ============================================================
-rem  Bagua frontend-baijin launcher -- ASCII only + CRLF on purpose.
+rem  Bagua frontend launcher -- ASCII only + CRLF on purpose.
 rem
 rem  cmd.exe traps avoided here, same as start_frontend.bat:
 rem   1) Non-ASCII comments get read in the ANSI codepage and the
@@ -21,7 +21,7 @@ rem ============================================================
 
 if not exist "package.json" (
   echo [ERROR] package.json not found in "%CD%"
-  echo         Expected layout: D:\Web\bagua\frontend-baijin\package.json
+  echo         Expected layout: D:\Web\bagua\frontend\package.json
   pause
   exit /b 1
 )
@@ -56,7 +56,7 @@ if errorlevel 1 (
   echo.
 )
 
-echo Starting frontend-baijin - Vite dev server ...
+echo Starting frontend - Vite dev server ...
 echo.
 echo   local : http://localhost:3001
 echo   LAN   : http://%COMPUTERNAME%:3001   -- open this on your phone
