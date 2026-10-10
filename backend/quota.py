@@ -144,7 +144,7 @@ def status() -> dict:
             site, mailed = _row(conn, day, _SITE_KEY)
     except Exception as e:                      # 库坏了不该让健康检查 500
         return {"day": day, "used": None, "error": "%s: %s" % (type(e).__name__, e),
-                "free_ai_limit": FREE_AI_PER_DAY, "ip_free_limit": IP_FREE_AI_LIMIT,
+                "free_ai_limit": FREE_AI_PER_DAY, "ip_limit": IP_FREE_AI_LIMIT,
                 "soft_limit": SITE_SOFT_LIMIT,
                 "hard_limit": SITE_HARD_LIMIT, "degraded": False,
                 "soft_mailed": False, "resets_at": resets_at(), "message": DEGRADE_MESSAGE}
@@ -152,7 +152,7 @@ def status() -> dict:
         "day": day,
         "used": site,
         "remaining": max(0, SITE_HARD_LIMIT - site),
-        "free_ai_limit": FREE_AI_PER_DAY, "ip_free_limit": IP_FREE_AI_LIMIT,
+        "free_ai_limit": FREE_AI_PER_DAY, "ip_limit": IP_FREE_AI_LIMIT,
         "soft_limit": SITE_SOFT_LIMIT, "hard_limit": SITE_HARD_LIMIT,
         "degraded": site >= SITE_HARD_LIMIT,
         "soft_reached": site >= SITE_SOFT_LIMIT,
