@@ -192,7 +192,7 @@ components:
 - **Error / Disabled:** 错误 `--error-text/bg/border` 暖红组；禁用 `--state-disabled` 灰底。
 
 ### Navigation
-- **Style:** 楷体 16px，sticky 顶栏 56px，新纸底 + 缥灰底边；品牌（金印「易」+「观候·转明」+ slogan「观天机 · 断人事」）右置。
+- **Style:** 楷体 16px，sticky 顶栏 56px，新纸底 + 缥灰底边；品牌（金印「观」+「观候·转明」+ slogan「观天机 · 断人事」）右置。
 - **State:** 激活项深金字 + 金色下划线 scaleX(1)；hover 缥灰底 + 下划线 scaleX(0.4)。
 - **Mobile:** 抽屉分组收纳，链接 min-height 44px，激活项深金 + 1px 金色左边线。
 
