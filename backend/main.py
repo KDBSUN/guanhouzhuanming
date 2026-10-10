@@ -2530,7 +2530,7 @@ async def meihua_gua_wanwu():
             "原文": v.get("raw", ""),
             "起例行": v.get("line"),
             "类象": cats,
-            # 每个类目**自己的**底本行号。frontend-baijin 的万物搜索要给到"这一类"的行——
+            # 每个类目**自己的**底本行号。frontend 的万物搜索要给到"这一类"的行——
             # 只给起例行的话，乾的 115 条物象会全部标成 1088（卦头那一行），回源对不上。
             "类象行": {k: vv for k, vv in (v.get("_lines") or {}).items()
                        if isinstance(vv, int)},
@@ -2538,7 +2538,7 @@ async def meihua_gua_wanwu():
     return {
         "八卦": out,
         "出处": "《梅花易数·卷一·八卦万物属类》（逐字抽取，每类带底本行号）",
-        # 口语 → 原文条目的检索词表（frontend-baijin 本地索引用）。
+        # 口语 → 原文条目的检索词表（frontend 本地索引用）。
         # 检索词**不是原文**，只是把口语对到已核实条目的指针（每条目标注底本行号）；
         # 加它是因为「门」这类单字走不了子串匹配（「药」⊂「药婆」就是教训）。
         "检索词": waijing._XIANG.get("keys", {}).get("map", {}),

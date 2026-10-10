@@ -1,226 +1,226 @@
 ﻿[
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\App.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\App.tsx",
         "Hash":  "63E712F742F28DB745BE2B1311DADFB8481A3C7705B8B369DD681400F8815D96"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\main.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\main.tsx",
         "Hash":  "AC82DCD17E9672A5732812BBE8C322C16ED9464786484845E9D4B2D3BD70EB3A"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\vite-env.d.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\vite-env.d.ts",
         "Hash":  "65996936FBB042915F7B74A200FCDDE7E410F32A669B1AB9597CFAA4B0FADDB5"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\asr.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\asr.ts",
         "Hash":  "82CE80D02768092EE82F3A62A038C1CFDC456765AFE7B115D06628CE4ED7316A"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\backup.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\backup.ts",
         "Hash":  "FCAA008312119D52206A2FBA577CBEF718B068C726A14F2965B4896443B702FC"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\bazi.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\bazi.ts",
         "Hash":  "1821795A1580DE10956236E58FACCBD55599A558F50F0B43CAE58F3F40F04277"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\client.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\client.ts",
         "Hash":  "5C3F1B3E7B592E23CD78E5E973582C101B038624BBB8D20E4D4C7A933B8C4083"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\daliuren.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\daliuren.ts",
         "Hash":  "3073C7486EDF2F505447D0B599846268060EC6EFC0C76E8FFD67F98A63334817"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\feedback.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\feedback.ts",
         "Hash":  "9BD6DEF17F33946F27D7CA082A5E9EB6132BFE7A6FFF4175F99B901332D8ABE6"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\gua.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\gua.ts",
         "Hash":  "666FD542DF4F2406ECDC802337A1CECFB4F161EFF63D60CE3BC123DD7E56272C"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\liuyao.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\liuyao.ts",
         "Hash":  "2D90282BEEDD09C5B9877BD8E2735188D32FC7BF9320A11B27F524E5DCDA79EF"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\llm.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\llm.ts",
         "Hash":  "C333C4B507CABDE89B5883E7EB7D8CE5FAA30E76906D4EA067B7E532529FF2D6"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\meihua.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\meihua.ts",
         "Hash":  "4DDDC591DD481735B60C687438330E434A2B38C8674E2BEB67D152338CFA739A"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\mingju.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\mingju.ts",
         "Hash":  "88EC2CC98A48F85B0BE1654BDCC9DE9B01D88163582F4132D8DA3986D53C0231"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\owner.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\owner.ts",
         "Hash":  "34F17606160C0C11C3D64E4A9EECEB50EA8C72030FDDD8E09CEFE2DE5CAF67FF"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\qimen.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\qimen.ts",
         "Hash":  "84BA8DA6D1C0D137BE61CA0B877D9923A07C1BFA505629C65363291597B0ADED"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\records.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\records.ts",
         "Hash":  "AC1E098EB3567E7A98FFE548D235303B45ED7ADEF5A9DE01B4E5D16B9E3185B1"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\sse.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\sse.ts",
         "Hash":  "E83CC77B701D5338EA01CFDC2C2579FA22AA5E330E3FF6A008BD91FE64DFFCE9"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\terms.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\terms.ts",
         "Hash":  "2DC59E76C255A8E056AEC3F6F9FA4AFA55E5E4005AFEBB780C80649983959A2B"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\types.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\types.ts",
         "Hash":  "91C4FD06228EF58E19D652E266DD3C4B8AA2F63569EB4A865DF41C7B11C90030"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\api\\waijing.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\api\\waijing.ts",
         "Hash":  "1164490CEC45A353CA075AF39798C3B92029F67D75240BB365DFCC0514B331EE"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\art\\BaguaProgress.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\art\\BaguaProgress.tsx",
         "Hash":  "D3558A0972D124DCFE29890C6C82085AE250CC3E975141FD3ACC1F6B2F55EF09"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\art\\book.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\art\\book.tsx",
         "Hash":  "50E9690251DC3816222AB544E4D176BE7B4F464B2FCC9DD677B4E9DEA075FA1A"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\art\\icons.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\art\\icons.tsx",
         "Hash":  "F989E970AD04091A001321408B904B87DEF1D3CC83C2DE0C4CFDF48E81098CF5"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\BaguaChart.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\BaguaChart.tsx",
         "Hash":  "EBBFB1E3D7D47EE87F4679EA77EBFAEB100E97B74CC0C7B770A15F4B5E25EBFB"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\BaguaPicker.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\BaguaPicker.tsx",
         "Hash":  "05386CBCA1B33C4B1F81F613662288F54B51C730950CC001B41428BFAF338A06"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\baguaSearch.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\baguaSearch.ts",
         "Hash":  "7F002D25DD043004E71BEBAF8F7752221047C0050564C1EE0484E2AAA30AF512"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\BaziPickers.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\BaziPickers.tsx",
         "Hash":  "E35309E8C845567ABF16E6B0942510C2A3A89BEF33E91566481F571D3A951EF3"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\CheckBlock.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\CheckBlock.tsx",
         "Hash":  "4560A64CFAAE559B26970262BFF2C914D205E1F8B4D83878E12FEF1B8FF994C7"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\DuanGuaOrder.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\DuanGuaOrder.tsx",
         "Hash":  "5A423360B9A0D96978F604D5633CB3C65448E7E13DA8596B4E1A497369B78678"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\ErrorBoundary.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\ErrorBoundary.tsx",
         "Hash":  "482B3D6BBD42561237C6B7C33F58E531B7261DA11288E6C1E439DD1C9C133674"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\FloatingMic.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\FloatingMic.tsx",
         "Hash":  "7F321295010A3D436DCE19246843FF6EBBD06BAB45F591B176039466C3466A11"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\FreeQuotaHint.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\FreeQuotaHint.tsx",
         "Hash":  "869AAB8E708E7D7A12140387BB06BAD61121444A68EBA43176750502A371579F"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\liuyaoSeed.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\liuyaoSeed.ts",
         "Hash":  "14FBB545460A4B63174A49BE3A67FF9EBD6B0C9CCA83237C3763622F60116EF5"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\MarkdownLite.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\MarkdownLite.tsx",
         "Hash":  "64AB98CADA07A1E7DC8C3DC8A6762551CA92E98BDD6A48363B070A0A0CF9F53E"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\OwnerTokenPanel.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\OwnerTokenPanel.tsx",
         "Hash":  "6EAD5DFE755AABC506D4686E100E35B2AB0A110147BD5FC1287E330FA4541BAA"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\PagedCards.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\PagedCards.tsx",
         "Hash":  "CB5A4E425C9D72E8875E944909E72A1C515F585386D633E0624872472C21EAE1"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\ProfileLine.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\ProfileLine.tsx",
         "Hash":  "C39216804EA5F84A7196965C971885254BFEB70089C85617DB2CD2EF0A5DBA37"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\QuoteRef.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\QuoteRef.tsx",
         "Hash":  "613E49391016D07ABFB7A8D3BED1E5BAAD4679F9A69F497F66F71F0A2D707EE8"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\useSpeech.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\useSpeech.ts",
         "Hash":  "2B0834EE58A99B076FFAD3E94B7BC52BB53241445C5EF4F62A393E63FEB1758A"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\WaijingBlock.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\WaijingBlock.tsx",
         "Hash":  "8038912A82E414A8273743400AFC20A3777F4573DDBA200F34A796C4D9DD9F9A"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\common\\Wheel.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\common\\Wheel.tsx",
         "Hash":  "08F3C50AFC30189E7969810F5DBCF58235215DC8815CA6E24D9A066814910A5F"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\data\\baguaAttr.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\data\\baguaAttr.ts",
         "Hash":  "143E86A5F44637601E75BF1DF8DE3BAA0F481121CC37F6B30D537D815F350216"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\data\\trigrams.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\data\\trigrams.ts",
         "Hash":  "62D328AC053D5F92E581C740490DBEDF050B039E092DD8FEFF256B76A645EF9B"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\data\\wuxingAxes.ts",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\data\\wuxingAxes.ts",
         "Hash":  "6A1E07A726444EDE8A382543F28CE2C2147AB1B33E8C253435AF0A522E4698CE"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\ApiSettingsView.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\ApiSettingsView.tsx",
         "Hash":  "C962904892EC2D323EF5D033CE60C806BE2EAB605C193FA6403BD7E170FD6248"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\BaziView.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\BaziView.tsx",
         "Hash":  "2E6748D8AD0D4FEDD0E96309128F6CA28BDB1077E2993FDC2008212A32C48F9F"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\DaliurenView.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\DaliurenView.tsx",
         "Hash":  "AA3F04DB6C827DF31D67309E108A756947408E1C5AD45254E70E89E8ECD8B223"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\FeedbackPage.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\FeedbackPage.tsx",
         "Hash":  "DF6954C0BD7E82FC1C9EE610C36E466F5F25E695E93A99368E89572E1B902FED"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\HomeView.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\HomeView.tsx",
         "Hash":  "D3ABB50CC1B7B0B0D30BFC3159DCAD2D5D89A4E08917E593BF024F668BB6C75A"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\LiuyaoView.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\LiuyaoView.tsx",
         "Hash":  "9749A3916AE954782CB14387615F312A586641B7D7508B62C8062E42046DCD0C"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\MeihuaView.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\MeihuaView.tsx",
         "Hash":  "3DB898569AB926074A6EC04BD32CE69997DED58B542C7FF70E05CEF6AEFC5DEE"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\QimenView.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\QimenView.tsx",
         "Hash":  "30566BF5F5A883C2538A2C8C85FA242B3F6E2A799D3A9280587DB6F4C6EA3FAF"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\RecordsPage.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\RecordsPage.tsx",
         "Hash":  "EA59E91DD3FB3B69DEA159F7DDAD18F72E7889B7F7F920BC142928C4F0893520"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\TermsPage.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\TermsPage.tsx",
         "Hash":  "E0C73407F17F06183BE63161CAE90FA798667AFD53DE77460ED86E15B12A0835"
     },
     {
-        "Path":  "D:\\Web\\bagua\\frontend-baijin\\src\\views\\YizhiView.tsx",
+        "Path":  "D:\\Web\\bagua\\frontend\\src\\views\\YizhiView.tsx",
         "Hash":  "E236263B7268CC97F40FF47D91D04564839D7E0344236BE7C3E808C59F552F20"
     }
 ]

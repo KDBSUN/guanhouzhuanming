@@ -42,7 +42,7 @@ web
 
 - React 18 + TypeScript + Vite，哈希路由（`#/meihua` 等），无路由库、无动画库。
 - 开发端口 3001；`/api` 由 Vite proxy 转发到 `http://localhost:8000`。
-- 只新增/修改 `frontend-baijin/`，不改动 `frontend/`、`backend/` 及其他任何目录。
+- 只新增/修改 `frontend/`，不改动 `frontend/`、`backend/` 及其他任何目录。
 
 **未定/未接入**：后端全部端点尚未完全对接（v0 占位）；真实用户数据未采集。
 
