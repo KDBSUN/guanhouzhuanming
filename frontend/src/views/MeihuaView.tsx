@@ -464,7 +464,7 @@ export default function MeihuaView({ initialQuestion = '', replay = null, replay
   return (
     <div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">梅花易数</span>
         <span className="folio">卷一</span>

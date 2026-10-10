@@ -96,7 +96,7 @@ export default function TermsPage() {
   return (
     <div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">名物考</span>
         <span className="folio">卷五</span>

@@ -300,7 +300,7 @@ export default function RecordsPage({ onReplay }: {
   return (
     <div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">占验录</span>
         <span className="folio">卷四</span>

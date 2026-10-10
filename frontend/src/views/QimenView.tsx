@@ -42,7 +42,7 @@ export default function QimenView() {
   return (
     <div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">奇门遁甲</span>
         <span className="folio">卷七</span>

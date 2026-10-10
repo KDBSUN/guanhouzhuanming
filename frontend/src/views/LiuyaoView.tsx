@@ -432,7 +432,7 @@ export default function LiuyaoView({ initialQuestion = '', replay = null }: {
   return (
     <div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">纳甲六爻</span>
         <span className="folio">卷二</span>

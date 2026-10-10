@@ -400,7 +400,7 @@ export default function BaziView({ replay = null }: { replay?: Record<string, un
   return (
     <div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">四柱八字</span>
         <span className="folio">卷三</span>

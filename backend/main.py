@@ -368,7 +368,7 @@ def _quota_acquire(request: Request) -> dict:
             import asyncio
             body = quota.alert_text(int(res.get("site_used") or res.get("used") or 0))
             asyncio.create_task(run_in_threadpool(
-                mail_send, "【易占】今日 AI 解读已达软阈值", body))
+                mail_send, "【观候·转明】今日 AI 解读已达软阈值", body))
         except Exception:
             pass                        # 告警发不出去，也不该拦住用户的解卦
     if not res.get("allowed"):

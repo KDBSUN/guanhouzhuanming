@@ -29,7 +29,7 @@ def _cfg() -> dict:
         "user": (os.getenv("SMTP_USER") or "").strip(),
         "password": os.getenv("SMTP_PASS") or "",      # 授权码：仅来自 .env
         "to": (os.getenv("FEEDBACK_TO") or os.getenv("SMTP_USER") or "").strip(),
-        "sender_name": os.getenv("SMTP_SENDER_NAME", "易占·公测反馈"),
+        "sender_name": os.getenv("SMTP_SENDER_NAME", "观候·转明·公测反馈"),
     }
 
 
@@ -71,7 +71,7 @@ def send(subject: str, body: str) -> dict:
 def feedback_note_mail(text: str, contact: str = "", log_id: int = 0, title: str = "") -> dict:
     """用户留言 → 邮件。"""
     body = [
-        "【易占·公测留言】%s" % (title or "（无标题）"),
+        "【观候·转明·公测留言】%s" % (title or "（无标题）"),
         "",
         text,
         "",
@@ -81,14 +81,14 @@ def feedback_note_mail(text: str, contact: str = "", log_id: int = 0, title: str
         "（本邮件由站点反馈页自动发送；回复时请注意对方可能未留联系方式）",
     ]
     subj = title.strip() or text[:30].replace("\n", " ")
-    return send("【易占公测】新留言：%s" % subj, "\n".join(body))
+    return send("【观候·转明公测】新留言：%s" % subj, "\n".join(body))
 
 
 def claim_verdict_mail(question: str, claim_text: str, verdict: str,
                        note: str = "", log_id: int = 0) -> dict:
     """高价值负反馈（反向/未验）→ 邮件。这是校准台账最需要的样本。"""
     body = [
-        "【易占·负反馈】用户标记：%s" % verdict,
+        "【观候·转明·负反馈】用户标记：%s" % verdict,
         "",
         "所问之事：%s" % (question or "（未填）"),
         "被标记的断言：%s" % claim_text,
@@ -97,4 +97,4 @@ def claim_verdict_mail(question: str, claim_text: str, verdict: str,
         "————————————",
         "记录编号：#%s（可在决策日志/校准台账按此编号回溯当时的规则与权重版本）" % (log_id or "—"),
     ]
-    return send("【易占公测】%s：%s" % (verdict, (question or claim_text)[:24]), "\n".join(body))
+    return send("【观候·转明公测】%s：%s" % (verdict, (question or claim_text)[:24]), "\n".join(body))

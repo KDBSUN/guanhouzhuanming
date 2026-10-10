@@ -19,7 +19,7 @@
 ## 目录结构
 
 - `backend/` — FastAPI 服务：排盘引擎、命局校验、限流、邮件、外应配卦
-- `frontend/` — React + Vite + TypeScript（白金版前端）
+- `frontend/` — React + Vite + TypeScript（前端）
 - `data/` — 六十四卦资料（排盘引擎读取）
 - `backend/docs/` — 判据总表、产品流程总图
 

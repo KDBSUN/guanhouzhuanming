@@ -111,7 +111,7 @@ export default function YizhiView() {
       <div className="yz-reading-progress" aria-hidden="true" />
       <div className="yz-ambient" aria-hidden="true"><span /><span /><span /></div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">移植考</span>
         <span className="folio">卷九</span>

@@ -290,7 +290,7 @@ def acquire_free(owner: str, client_ip: str) -> dict:
 def alert_text(used: int) -> str:
     """软阈值告警邮件正文（由调用方交给 mailer.send）。"""
     return "\n".join([
-        "【易占·用量告警】今日 AI 解读已到软阈值。",
+        "【观候·转明·用量告警】今日 AI 解读已到软阈值。",
         "",
         "今日已用：%d 次（软阈值 %d · 硬降级 %d）" % (used, SITE_SOFT_LIMIT, SITE_HARD_LIMIT),
         "预计今日上限花费 ≈ %.1f 元（按 0.02 元/次估算）" % (SITE_HARD_LIMIT * 0.02),

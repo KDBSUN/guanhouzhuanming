@@ -8,7 +8,7 @@
 
 挂到定时任务（任选其一）：
     Linux  crontab：  0 */6 * * *  cd /path/backend && /usr/bin/python3 tools/check_balance.py || \
-                                     echo "余额告警" | mail -s "[易占] LLM 余额告警" 你的邮箱
+                                     echo "余额告警" | mail -s "[观候·转明] LLM 余额告警" 你的邮箱
     systemd timer：   见 docs/上线自检与兜底.md 里的 unit 片段
     Windows 任务计划：程序 python，参数 tools/check_balance.py，起始于 backend 目录
 

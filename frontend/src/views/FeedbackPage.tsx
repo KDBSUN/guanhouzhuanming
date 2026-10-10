@@ -64,7 +64,7 @@ function ReceiptView({ receipt }: { receipt: string }) {
   return (
     <div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">客问 · 凭回执作答</span>
         <span className="folio">卷六</span>
@@ -219,7 +219,7 @@ function FeedbackMain() {
   return (
     <div>
       <div className="leaf-head">
-        <span className="juan-mark">易占</span>
+        <span className="juan-mark">观候·转明</span>
         <FishTail />
         <span className="juan">客问</span>
         <span className="folio">卷六</span>
