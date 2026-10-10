@@ -12,14 +12,33 @@ import json
 import re
 from pathlib import Path
 
+import pytest
+
 import engine
 import main
 import yaoci_zhu
+import books_corpus
 from tools import build_yaoci_zhu as B  # 提取工具；测试直接复用它读同一本书
 
 BACKEND = Path(__file__).resolve().parents[1]
 LIB = BACKEND / "yaoci_zhu.json"
 DATA = BACKEND.parent / "data" / "meihua_data.json"
+
+
+def _book_text_or_skip() -> str:
+    """书按 books_corpus 定位（BOOKS_DIR → 仓库根 books/ → 仓库同级 books/）。
+    找不到就**跳过**并说明原因——与 test_quotes / test_waijing 一致：
+    书不在是"当前未生效"，不是失败，更不是静默通过。"""
+    reason = books_corpus.missing_reason()
+    if reason:
+        pytest.skip(reason)
+    root = books_corpus.books_root()
+    # B.BOOK_FILE = "books/wuxing/周易…md"；去掉 "books/" 前缀后在语料根下定位
+    rel = Path(B.BOOK_FILE).relative_to("books")
+    p = root / rel
+    if not p.exists():
+        p = root / Path(B.BOOK_FILE).name   # 兼容直接放在语料根下的旧位置
+    return p.read_text(encoding="utf-8", errors="replace")
 
 
 def _lib() -> dict:
@@ -34,12 +53,12 @@ def _meihua() -> dict:
 # ---------- 1. 逐字回源 ----------
 
 def test_book_file_present():
-    """回源测试只有在书确实存在时才有意义——书不在了就该红，而不是默默放过。"""
-    assert (B.REPO / B.BOOK_FILE).exists(), f"找不到书：{B.BOOK_FILE}"
+    """书在才回源；书不在就跳过（书已移出仓库，见 README「测试与逐字回源」）。"""
+    assert _book_text_or_skip(), "书文件为空"
 
 
 def test_every_note_is_verbatim_in_the_book():
-    book = B.norm(B.read_book())
+    book = B.norm(_book_text_or_skip())
     miss = []
     for key, g in _lib()["by_key"].items():
         for pos, y in g["yao"].items():
@@ -50,7 +69,7 @@ def test_every_note_is_verbatim_in_the_book():
 
 def test_every_note_belongs_to_a_comment_section():
     """光"能在书里找到"不够：还要确认它归属的那一节是【注释】，不是【译文】/【评析】。"""
-    lines = B.read_book().split("\n")
+    lines = _book_text_or_skip().split("\n")
     flat = [B.norm(l) for l in lines]
     bad = []
     for key, g in _lib()["by_key"].items():
